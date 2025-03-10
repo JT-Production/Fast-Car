@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock %}</title>
+
+    <!--Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180"
+    href="https://res.cloudinary.com/dycepm2dh/image/upload/v1728565041/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://res.cloudinary.com/dycepm2dh/image/upload/v1728565102/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://res.cloudinary.com/dycepm2dh/image/upload/v1728565130/favicon-16x16.png">
+  <link rel="manifest" href="https://res.cloudinary.com/dycepm2dh/raw/upload/v1728565194/site.webmanifest"> -->
+
+    <!--Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!--External Css Link-->
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!--Animate.css link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body class="py-2 px-3">
+    <div
+      class="container-fluid about-banner d-flex align-items-center justify-content-center flex-column"
+    >
+      <h1 class="text-white display-1 fw-bold">About Us</h1>
+      <div class="d-flex g-5">
+        <a href="" class="text-decoration-none fw-bold text-white">Home</a>
+        <span class="text-white">/</span>
+        <a href="" class="list-styled text-warning text-decoration-none fw-bold"
+          >About</a
+        >
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="d-flex">
+            <img
+              src="/static/imgs/about-img-1.jpg"
+              alt=""
+              class="img-fluid rounded-5"
+              style="object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-6">About us</h1>
+          <h1 class="display-5 text-warning fw-semibold">
+            Your trusted partner in reliable car rental
+          </h1>
+          <p class="text-secondary mb-5">
+            Aqestic Optio Amet A Ququam Saepe Aliquid Voluate Dicta Fuga Dolor
+            Saerror Sed Earum A Magni Soluta Quam Minus Dolor Dolor
+          </p>
+          <div class="mb-5">
+            <div class="d-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_718_6)">
+                  <path
+                    d="M18.1504 70.0362H24.5654C28.2842 70.0362 28.2897 64.2422 24.5654 64.2422H18.1504C14.4318 64.2422 14.4263 70.0362 18.1504 70.0362ZM18.1504 66.4102H24.5654C25.5078 66.4102 25.5078 67.8682 24.5654 67.8682H18.1504C17.2082 67.8682 17.2082 66.4102 18.1504 66.4102Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M26.1109 37.5626L19.0493 44.6244L16.6037 42.1786C15.6123 41.188 14.0796 42.7205 15.0706 43.7117L18.2828 46.9239C18.7939 47.3471 19.3049 47.3471 19.8159 46.9239L27.6441 39.0957C28.635 38.1045 27.1023 36.572 26.1109 37.5626Z"
+                    fill="#FF3600"
+                  ></path>
+                  <path
+                    d="M73.1938 48.2596C72.7562 47.4242 72.4391 46.509 72.2237 45.5905C71.1666 41.1687 69.5606 36.8848 67.4509 32.8576L63.9233 26.1245C61.9264 22.3126 56.0332 22.9464 54.9206 27.1272C52.2816 26.1778 49.3025 27.7383 48.5809 30.4486C46.3992 29.6635 43.8798 30.5882 42.7232 32.5947V8.792V4.53989C42.723 2.2047 40.8231 0.304688 38.4877 0.304688H13.2352C11.8336 0.304688 11.8336 2.47266 13.2352 2.47266H38.4877C39.6276 2.47266 40.555 3.39997 40.555 4.53989V7.70801H2.16797V4.53989C2.16797 3.39997 3.09528 2.47266 4.2352 2.47266H7.16499C8.56651 2.47266 8.56651 0.304688 7.16499 0.304688H4.2352C1.90001 0.304688 0 2.2047 0 4.53989V8.792V61.0379V70.0695C0 72.4047 1.90001 74.3047 4.2352 74.3047H38.4877C40.823 74.3047 42.723 72.4047 42.723 70.0695V61.0379V56.696L46.5966 58.6119C47.5538 59.0854 48.3405 59.8737 48.812 60.8319C50.5328 64.3289 54.9433 65.7786 58.4077 63.9635L64.8661 60.58C66.1076 59.9296 65.1015 58.0094 63.86 58.6596L57.4016 62.0431C55.0027 63.3005 51.9531 62.3047 50.7572 59.8747C50.0763 58.4911 48.9402 57.3525 47.5577 56.6685L31.1197 48.5378C28.0324 47.0383 30.2651 42.1949 33.4006 43.6573L39.3692 46.7992C40.29 47.284 41.3172 46.259 40.8343 45.3372L30.4657 25.5462C28.7632 22.3454 33.3227 19.3909 35.0618 22.7111L42.3907 36.7L44.305 40.354C44.9369 41.5607 46.8741 40.5863 46.2254 39.3479L44.3617 35.7906C43.607 33.2756 46.7119 31.2478 48.7104 33.0011L50.7842 36.9595C51.4161 38.1662 53.3533 37.1918 52.7046 35.9535L50.5959 31.9286C50.3986 29.6162 53.2303 28.1281 55.0203 29.6533L57.1076 33.6378C57.7395 34.8445 59.6767 33.87 59.028 32.6317L56.9403 28.6467C56.6562 25.8088 60.6504 24.5489 62.0026 27.1304L65.5302 33.8635C67.5568 37.7319 69.0994 41.847 70.115 46.0941C70.3614 47.1958 70.7492 48.2651 71.2733 49.2654C72.5223 51.6493 71.5988 54.6048 69.215 55.8538C67.9736 56.5045 68.9799 58.4248 70.2211 57.7742C73.664 55.9706 74.9976 51.7023 73.1938 48.2596ZM40.555 70.0695C40.555 71.2094 39.6276 72.1367 38.4877 72.1367H4.2352C3.09528 72.1367 2.16797 71.2094 2.16797 70.0695V62.1219H40.555V70.0695ZM27.8717 44.0104C27.1359 45.5571 27.2788 47.4097 28.2376 48.8283C26.445 50.7042 23.9857 51.7672 21.3614 51.7672C16.1103 51.7672 11.8383 47.4952 11.8383 42.244C11.8383 36.9929 16.1103 32.7209 21.3614 32.7209C26.3439 32.7209 30.4422 36.5677 30.8486 41.447C29.5647 41.8386 28.4488 42.7969 27.8717 44.0104ZM35.7423 20.187C35.2697 19.8033 34.7244 19.5081 34.1257 19.3211C30.6535 18.2361 27.1566 21.4201 27.9208 24.9759H7.3419C7.14259 24.9759 6.98057 24.8139 6.98057 24.6146V16.868C6.98057 16.6687 7.14259 16.5066 7.3419 16.5066H35.381C35.5803 16.5066 35.7423 16.6687 35.7423 16.868V20.187ZM40.555 28.5247L37.9103 23.4767V16.868C37.9103 15.4734 36.7755 14.3387 35.381 14.3387H7.3419C5.94732 14.3387 4.8126 15.4734 4.8126 16.868V24.6147C4.8126 26.0093 5.94732 27.144 7.3419 27.144H28.8551L37.2982 43.2594L34.3893 41.7281C34.3765 41.7213 34.3633 41.7146 34.3502 41.7084C33.9195 41.5035 33.469 41.3653 33.0106 41.2933C32.5247 35.2902 27.4875 30.5529 21.3616 30.5529C14.915 30.5529 9.67044 35.7975 9.67044 42.244C9.67044 48.6906 14.915 53.9352 21.3616 53.9352C24.5947 53.9352 27.6264 52.6241 29.8288 50.306C33.2678 52.2878 36.9968 53.8636 40.555 55.6236V59.9537H2.16797V9.87598H40.555V28.5247Z"
+                    fill="#040401"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_718_6">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(0 0.304688)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="text-secondary ms-5">
+                <h5 class="text-black fw-semibold">Easy Booking Process</h5>
+                <p>
+                  We Have Optimized The Booking Process So That Our Clients Can
+                  Experience The Easiest And The Safest Service
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 74 75"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_15_229)">
+                  <path
+                    d="M18.3842 35.8803L12.4874 34.6084C10.8686 34.2615 9.36548 35.5334 9.36548 37.1522V39.5803C9.36548 41.5459 10.8686 42.0084 12.7186 42.0084H19.1936C20.4655 42.0084 21.7374 41.7772 21.7374 40.3897V40.0428C21.7374 37.9615 20.3499 36.2272 18.3842 35.8803ZM11.5624 39.5803C11.5624 39.4647 11.5624 39.4647 11.5624 37.0365C11.5624 36.8053 11.7936 36.574 12.0249 36.6897L17.9217 37.9615C18.7311 38.1928 19.3092 38.8865 19.4249 39.6959C15.378 39.6959 11.9092 39.6959 11.5624 39.5803Z"
+                    fill="black"
+                  ></path>
+                  <path
+                    d="M70.8779 23.5084L62.5529 19.5772C59.7779 18.3053 56.7716 17.8428 53.881 18.4209L52.6091 15.8772C51.6841 13.5647 49.4873 11.9459 46.9435 11.9459H19.8873C17.3435 11.9459 15.1466 13.449 14.2216 15.7615L9.71226 25.1272C8.67163 23.624 6.93726 22.699 5.08726 22.699H3.12163C1.38726 22.699 -0.000244141 24.0865 -0.000244141 25.8209V27.0928C-0.000244141 28.8272 1.38726 30.2147 3.12163 30.2147H6.12788C4.85601 31.8334 4.27788 33.9147 4.27788 35.9959V42.9334C4.27788 45.5928 5.20288 48.1365 7.05288 50.3334V55.5365C7.05288 57.849 8.90288 59.699 11.2154 59.699H15.4935C17.806 59.699 19.656 57.849 19.656 55.5365V53.4553H42.781C47.8685 60.3928 55.8466 63.399 55.9623 63.399C56.1935 63.5147 56.4248 63.5147 56.7716 63.399C56.8873 63.2834 73.9998 57.0397 73.9998 41.4303V28.4803C73.9998 26.399 72.7279 24.4334 70.8779 23.5084ZM16.3029 16.6865C16.881 15.1834 18.2685 14.2584 19.8873 14.2584H46.9435C48.5623 14.2584 49.9498 15.1834 50.6435 16.8022L51.6841 18.999C51.2216 19.1147 50.7591 19.3459 50.2966 19.5772L41.9716 23.5084C40.1216 24.4334 38.8498 26.2834 38.8498 28.3647H10.5216C10.9841 27.6709 10.5216 28.8272 16.3029 16.6865ZM2.31226 27.0928V25.8209C2.31226 25.3584 2.65913 25.0115 3.12163 25.0115H5.08726C7.39976 25.0115 8.20913 27.0928 8.44038 27.4397C8.32476 27.6709 8.20913 27.7865 7.97788 28.0178H3.12163C2.65913 27.9022 2.31226 27.5553 2.31226 27.0928ZM17.3435 55.4209C17.3435 56.4615 16.5341 57.2709 15.4935 57.2709H11.0998C10.0591 57.3865 9.24976 56.4615 9.24976 55.4209V52.0678C10.6373 52.8772 12.256 53.3397 13.8748 53.3397H17.3435V55.4209ZM13.7591 51.1428C9.59663 51.1428 6.35913 47.0959 6.35913 42.8178V35.8803C6.35913 33.9147 7.16851 32.0647 8.55601 30.5615H38.8498V40.7365H26.131C25.5529 40.7365 24.9748 41.199 24.9748 41.8928C24.9748 42.5865 25.4373 43.049 26.131 43.049H38.9654C39.081 43.8584 39.081 44.5522 39.3123 45.2459H26.131C25.5529 45.2459 24.9748 45.7084 24.9748 46.4022C24.9748 47.0959 25.4373 47.5584 26.131 47.5584H39.7748C40.2373 48.8303 40.6998 50.1022 41.3935 51.1428H13.7591ZM71.6873 41.4303C71.6873 54.2647 58.7373 60.1615 56.4248 61.0865C48.0998 57.7334 41.1623 50.5647 41.1623 41.4303C41.1623 37.1522 41.1623 34.8397 41.1623 28.4803C41.1623 27.2084 41.856 26.1678 43.0123 25.5897L51.3373 21.6584C54.6904 20.0397 58.3904 20.0397 61.7435 21.6584L70.0685 25.5897C71.1091 26.1678 71.9185 27.2084 71.9185 28.4803V41.4303H71.6873Z"
+                    fill="black"
+                  ></path>
+                  <path
+                    d="M67.7559 28.249L60.1247 24.6647C57.8122 23.5084 54.9215 23.5084 52.609 24.6647L45.0934 28.249C44.7465 28.4803 44.3997 28.8272 44.3997 29.2897V41.4303C44.3997 50.5647 52.3778 55.5366 55.8465 57.2709C56.1934 57.3866 56.5403 57.3866 56.8872 57.2709C60.3559 55.5366 68.334 50.5647 68.334 41.4303V29.2897C68.334 28.8272 68.1028 28.4803 67.7559 28.249ZM66.1372 41.4303C66.1372 48.8303 59.6622 53.2241 56.4247 54.9584C52.609 52.8772 46.7122 48.7147 46.7122 41.4303V29.9834L53.6497 26.6303C55.384 25.8209 57.4653 25.8209 59.1997 26.6303L66.1372 29.9834V41.4303Z"
+                    fill="black"
+                  ></path>
+                  <path
+                    d="M51.9153 41.0834C51.4528 40.7365 50.759 40.8522 50.2965 41.3147C49.834 41.7772 50.0653 42.4709 50.5278 42.9334L54.9215 46.2865C55.384 46.6334 56.0778 46.5178 56.5403 46.0553L63.0153 37.6147C63.3622 37.1522 63.2465 36.4584 62.784 35.9959C62.3215 35.649 61.6278 35.7647 61.1653 36.2272L55.384 43.7428L51.9153 41.0834Z"
+                    fill="#FF3600"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_15_229">
+                    <rect
+                      width="74"
+                      height="74"
+                      fill="white"
+                      transform="translate(-0.000244141 0.730286)"
+                    ></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div class="text-secondary ms-5">
+                <h5 class="text-black fw-semibold">
+                  Convenient Pick-Up & Return Process
+                </h5>
+                <p>
+                  We Have Optimized The Booking Process So That Our Clients Can
+                  Experience The Easiest And The Safest Service
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-5 mt-5">
+        <div class="container">
+          <h6 class="text-center">Executive Partners</h6>
+          <h1 class="display-3 fw-semibold text-center text-warning">
+            Trusted by leading brands
+          </h1>
+          <center>
+            <div class="grid">
+              <img
+                src="/static/imgs/images (1).png"
+                alt=""
+                class="img-fluid h-25 w-25 g-col-3"
+                style="
+                  width: 160px !important;
+                  height: 100px !important;
+                  object-fit: contain;
+                "
+              />
+              <img
+                src="/static/imgs/images.png"
+                alt=""
+                class="img-fluid h-25 w-25 g-col-3"
+                style="
+                  width: 160px !important;
+                  height: 100px !important;
+                  object-fit: contain;
+                "
+              />
+              <img
+                src="/static/imgs/images (2).png"
+                alt=""
+                class="img-fluid h-25 w-25 g-col-3"
+                style="
+                  width: 160px !important;
+                  height: 100px !important;
+                  object-fit: contain;
+                "
+              />
+              <img
+                src="/static/imgs/images (3).png"
+                alt=""
+                class="img-fluid w-25 h-25 g-col-3"
+                style="
+                  width: 160px !important;
+                  height: 100px !important;
+                  object-fit: contain;
+                "
+              />
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+<div class="container-fl py-5 mt-5 bg-warning">
+      <div class="center-hero">
+        <h4 style="transform: translateY();" class="text-center">Team of PESS Group</h4>
+        <h1 class="text-center fw-bold">TEAM</h1>
+        <center><hr class="mb-4" style="width: 250px; " ></center>
+        <p class="text-center mb-5">Empowering e-Business Excellence</p>
+</div>
+    
+       
+
+
+        <div class="container marketing py-3 mt-5 ">
+         
+          <div class="row card2 ">
+
+            <div class="col-xl-4 col-md-6 mb-3">
+            <center> <img src="https://res.cloudinary.com/dmvwjmy23/image/upload/c_fill,ar_1:1,g_auto,e_improve/v1708348456/ceo_-removebg-preview_accdqs.png" alt="Journey" style="width: 350px;  object-fit: cover; " height="302">
+            </center><div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+             
+              <h3 class="text-center fw-bold" style="font-weight: 550;">Michael Emelieze</h3>
+              <h6 class=" fw-bold text-center" style="color:#7bcbe3  ;">CEO</h6>
+              
+              
+             </div>
+                    
+          </div><!-- /.col-lg-4 -->
+
+
+              <div class="col-xl-4 col-md-6 mb-3">
+                 <center><img src="https://res.cloudinary.com/dmvwjmy23/image/upload/v1708339490/PESS%20images/oiaf75xgvao15fc6pydu.png" alt="Journey" style="width: 350px;  object-fit: contain; " height="300">
+                 </center> <div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+                
+                  <h4 class="text-center fw-bold" style="font-weight: 550;">Salvation Alibor</h4>
+                  <h6 class=" fw-bold text-center" style="color:#7bcbe3  ;">DIRECTOR</h6>
+                  
+                
+
+                 </div>
+                        
+              </div><!-- /.col-lg-4 -->
+
+              <div class="col-xl-4 col-md-6 text-center mb-3">
+              <center>  <img src="https://res.cloudinary.com/dmvwjmy23/image/upload/v1708339490/PESS%20images/mdqghbtmzoku0r65hz5h.png" alt="Journey" style="width: 350px;   object-fit: contain; " height="300">
+              </center><div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+                
+                <h4 class="text-center fw-bold" style="font-weight: 550;">Innocent Ekeleme</h4>
+                <h6 class=" fw-bold" style="color:#7bcbe3  ;">DIRECTOR OF SHARED SERVICE</h6>
+                
+                
+
+               </div>
+                      
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-xl-4 col-md-6 mb-3">
+             <center> <img src="https://res.cloudinary.com/dmvwjmy23/image/upload/v1708339488/PESS%20images/lq2leonhefjbawcfmjia.png" alt="Journey" style="width: 350px; object-fit: contain; " height="300">
+             </center> <div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+              <h4 class="text-center fw-bold" style="font-weight: 550;">Moses Elimian</h4>
+              <h6 class=" fw-bold text-center mb-3" style="color:#7bcbe3  ;">DIRECTOR OF COPERATE BUISNESS </h6>
+  
+              
+                 
+
+             </div>
+                    
+          </div><!-- /.col-lg-4 -->
+
+
+
+
+
+
+          <div class="col-xl-4 col-md-6 text-center">
+           <center><img src="https://res.cloudinary.com/dmvwjmy23/image/upload/v1708339449/PESS%20images/wf1fwa81v36ywvij66om.png" alt="Journey" style="width: 350px;  object-fit: contain; " height="300">
+           </center> <div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+            <h4 class="text-center fw-bold " style="font-weight: 550;">Emmanuella Uyaelumuo</h4>
+            <h6 class=" fw-bold mb-3" style="color:#7bcbe3  ;">LEGAL ADVISER/ COMPANY SECRETARY</h6> 
+          
+            
+             
+
+           </div>
+                  
+        </div><!-- /.col-lg-4 -->
+
+
+      <div class="col-xl-4 col-md-6 text-center">
+     <center> <img src="https://res.cloudinary.com/dmvwjmy23/image/upload/v1708339452/PESS%20images/pjvwsffctaybqcg7alrm.png" alt="Journey" style="width: 350px; object-fit: contain; " height="300">
+     </center> <div class="p-2 " style="background-color: rgba(128, 128, 128, 0.076);">
+        <h4 class="text-center fw-bold" style="font-weight: 550;">Chinonso Ojijeme </h4>
+        <h6 class=" fw-bold mb-3" style="color:#7bcbe3  ;">DIRECTOR</h6>
+        
+         
+       </div>
+              
+    </div><!-- /.col-lg-4 -->
+             
+            </div><!-- /.row -->
+</div>
+    
+</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
