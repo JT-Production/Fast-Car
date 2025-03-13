@@ -65,29 +65,36 @@
               Admin Sign in
             </h1>
             <p class="text-center">Login to your admin dashboard</p>
-
+            {% if errormessage %}
+            <div class="alert alert-warning py-2 text-center" role="alert">
+              {{errormessage}}
+            </div>
+            {% endif %}
             <div class="modal-body w-75 pt-5  mx-auto">
-              <form method="POST" action="/">
+              <form method="POST" action="/adminsignin">
+                {{ form.hidden_tag() }}
+
                 <div class="form-floating mb-4">
-                  <input
+                  <!-- <input
                     type="email"
                     class="form-control py-3 w-100 rounded-bottom-0"
                     id="exampleInputEmail1"
                     placeholder=" Email"
                     aria-describedby="emailHelp"
-                  />
-
+                  /> -->
+                  {{ form.email(class_='form-control py-3 w-100 rounded-bottom-0', id_='exampleInputEmail1', placeholder_="Email", ) }}
                   <label for="floatingInput">Email</label>
                 </div>
 
                 <div class="form-floating mb-4">
-                  <input
+                  <!-- <input
                     type="email"
                     class="form-control py-3 w-100 rounded-bottom-0"
                     id="exampleInputEmail1"
                     placeholder=" Email"
                     aria-describedby="emailHelp"
-                  />
+                  /> -->
+                  {{ form.password(class_='form-control w-100 py-3 rounded-top-0', id_='exampleInputPassword', placeholder_="Password",) }}
 
                   <label for="floatingPassword">Password</label>
                 </div>
@@ -97,17 +104,21 @@
                   type="submit"
                   class="w-100 mb-2 btn btn-lg rounded-3 login-btn btn-warning {{Disabled}}"
                 >
-                  Sign in
+                {{ form.loginButton.label.text }}
                 </button>
+
+                
+                  <a href="/login"
+                
+                class="w-100 mb-2 btn btn-lg rounded-3 login-btn btn-warning "
+              >
+             Go Back Home
+              </a>
+                
 
                 <hr />
 
-                <!-- <center>
-                  <small class="text-body-secondary text-center">
-                    Already have an account?
-                    <a href="/login" style="color: #7a5700"> Sign in </a>
-                  </small>
-                </center> -->
+             
               </form>
             </div>
 

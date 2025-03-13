@@ -22,11 +22,15 @@ class LoginForm(FlaskForm):
     loginButton = SubmitField(label='Login')
 
 class SignUpForm(FlaskForm):
-    name = StringField(label='Name', validators=[DataRequired()])
     email = StringField(label='Email', validators=[DataRequired()])
     checkBox = BooleanField(default=False)
     password = PasswordField(label='Password', validators=[DataRequired()])
     signUpButton = SubmitField(label='Sign Up')
+
+class adminForm(FlaskForm):
+    email = StringField(label='Email', validators=[DataRequired()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
+    loginButton = SubmitField(label='Login')
 
 
     
@@ -45,32 +49,27 @@ def init_db():
     conn = connect_db()
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS users
-                       (name TEXT NOT NULL, email TEXT PRIMARY KEY, password TEXT NOT NULL)''')
+                       (email TEXT PRIMARY KEY, password TEXT NOT NULL)''')
     conn.commit()
     conn.close()
 
 
-# @app.route('/', methods=['GET', 'POST'])
-# def signup():
-#     signup_form = SignUpForm()
-#     login_form = LoginForm()
-    
-#     name =  signup_form.name.data
-#     email = signup_form.email.data
-#     password = signup_form.password.data
-    
-#     if signup_form.validate_on_submit():  
-       
-#         if signup_form.email.data != "" and signup_form.password.data != "":
+# # Database admin connection function
+# def connect_db():
+#     adminConn = sqlite3.connect('users.db')
+#     return adminConn
 
-#             print("Login Success")
-#             return render_template("login.html", form=login_form )
-          
-#         else:    
-#             print("Denied")
-       
+# # Create admin table if it doesn't exist
+# def init_db():
+#     adminConn = connect_db()
+#     cursor = adminConn.cursor()
+#     cursor.execute('''CREATE TABLE IF NOT EXISTS users
+#                        (email TEXT PRIMARY KEY, password TEXT NOT NULL)''')
+#     adminConn.commit()
+#     adminConn.close()
 
-#     return render_template("sign-up.html", form=signup_form)
+
+# Routes
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -94,8 +93,8 @@ def signup():
         # hashed_password = 'implement_password_hashing(signup_form.password.data)'  # Replace with actual hashing logic
 
         # Insert user data into database
-        cursor.execute('INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
-                       (signup_form.name.data, signup_form.email.data, signup_form.password.data))
+        cursor.execute('INSERT INTO users (email, password) VALUES (?, ?)',
+                       (signup_form.email.data, signup_form.password.data))
         conn.commit()
         conn.close()
         print("successful")
@@ -128,7 +127,7 @@ def login():
 
         if user:
             # Check password using hashed password           
-            if user[2] == login_form.password.data:
+            if user[1] == login_form.password.data or user[2] == login_form.password.data or user[3] == login_form.password.data:
                 print('Login successful!')
                 return render_template('home.html')
             else:
@@ -137,6 +136,7 @@ def login():
                 return render_template('login.html', form=login_form, errormessage=message )
         else:
             print('Account doesn\'t exist')
+            message = "Account doesn't exist"
             return render_template('login.html', form=login_form, errormessage=message )
 
 
@@ -155,15 +155,40 @@ def about():
  
     return render_template("about.html")
 
-@app.route('/check')
-def checkArmstrong():
+@app.route('/contact')
+def contact():
  
-    return render_template("checkArm.html")
+    return render_template("contact.html")
 
 @app.route('/layout')
 def layout():
  
     return render_template("layout.html")
+
+@app.route('/admin')
+def admin():
+ 
+    return render_template("admin.html")
+
+
+@app.route('/adminsignin', methods=['GET', 'POST'])
+def adminsignin():
+    admin_form = adminForm()
+
+    if admin_form.validate_on_submit():
+    
+            # Check password using hashed password           
+        if admin_form.email.data == 'admin@autocar.com' and admin_form.password.data == 'admin123':
+            print('Login successful!')
+            message = "Login successful"
+            return render_template('admin.html', form=admin_form, message="Login successful")
+        else:
+            message = "Wrong Email or Password You are not an admin"
+            print('Incorrect password')
+            return render_template('adminsignin.html', form=admin_form, errormessage=message )
+
+
+    return render_template('adminsignin.html', form=admin_form)
 
 
 if __name__ == "__main__":
